@@ -1,0 +1,12 @@
+{
+  "name": "fake_data_server",
+  "version": "1.0.0",
+  "description": "Serve up fake API that we wish Zambia featured",
+  "main": "report.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node report.js"
+  },
+  "author": "Alex",
+  "license": "ISC"
+}
