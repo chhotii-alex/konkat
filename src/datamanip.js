@@ -22,7 +22,7 @@ Example:
         ]
     }
 */
-function collectByValue(objects, key) {
+export function collectByValue(objects, key) {
     let c = {};
     for (let i = 0; i < objects.length; ++i) {
         let o = objects[i];
@@ -60,7 +60,7 @@ function collectByValue(objects, key) {
     ]
     Notice that in the sample output, foo: 'a' comes before foo: 'b'.
 */
-function sortDataByKeys(c, keyName, valueName) {
+export function sortDataByKeys(c, keyName, valueName){
     let keys = Object.keys(c).sort();
     let result = [];
     for (let i = 0; i < keys.length; ++i) {

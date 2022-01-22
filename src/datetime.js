@@ -1,4 +1,4 @@
-function dayOfWeekName(date) {
+export function dayOfWeekName(date) {
     const index = date.getDay();
     return ["Sunday",
             "Monday",
@@ -9,7 +9,7 @@ function dayOfWeekName(date) {
             "Saturday"][index];
 }
 
-function ampmTimeString(date) {
+export function ampmTimeString(date) {
     return date.toLocaleTimeString('en-US',  {
         hour: 'numeric', minute: '2-digit', hour12: true
     });
