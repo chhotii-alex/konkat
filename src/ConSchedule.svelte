@@ -1,6 +1,8 @@
 <script>
 import { time_ranges_to_array } from "svelte/internal";
+import App from "./App.svelte";
 import { dayOfWeekName } from "./datetime";
+import OneDay from "./OneDay.svelte";
 
     export let schedule;
 </script>
@@ -10,16 +12,5 @@ import { dayOfWeekName } from "./datetime";
     {#if index}
         <hr/>
     {/if}
-    {day.dayOfWeek} <br/>
-    {#each day.times as time, time_index (time.timeString) }
-        { time.timeString }
-        {#each time.sessions as session, session_index (session.id)}
-            <div class="session_info" >
-                { session.title }
-                <p class="description" >
-                    { session.desc }
-                </p>
-            </div>
-        {/each}
-    {/each}
+    <OneDay {...day } />
 {/each}

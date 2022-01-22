@@ -3,10 +3,15 @@
     export let times;
 </script>
 
-<h2> This is the schedule for {dayOfWeek}. </h2>
-{times.length}
-{#if times.length}
-    There are events
-{:else}
-    There are no events
-{/if}
+<h2>{dayOfWeek} </h2>
+{#each times as time, time_index (time.timeString) }
+    { time.timeString }
+    {#each time.sessions as session, session_index (session.id)}
+        <div class="session_info" >
+            { session.title }
+            <p class="description" >
+                { session.desc }
+            </p>
+        </div>
+    {/each}
+{/each}
